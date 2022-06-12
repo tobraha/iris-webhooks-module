@@ -14,3 +14,4 @@ The module can be installed manually by running the following command:
 
 1. Get an interactive shell on the docker : ``docker exec -it <iris_web_app> /bin/bash``
 2. Install the new package ``pip3 install iris_webhooks_module``
+3. Configure the module as explained in the [documentation](https://dfir-iris.github.io/operations/modules/natives/IrisWebHooks/)
