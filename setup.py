@@ -28,14 +28,14 @@ README = (CURR_DIR / "README.md").read_text()
 
 setuptools.setup(
      name='iris_webhooks_module',
-     version='1.0.0',
+     version='1.0.1',
      packages=['iris_webhooks_module'],
      author="DFIR-IRIS",
      author_email="contact@dfir-iris.org",
      description="An interface module for webhooks support in DFIR-IRIS",
      long_description=README,
      long_description_content_type="text/markdown",
-     url="https://github.com/dfir-iris/iris-client",
+     url="https://github.com/dfir-iris/iris-webhooks-module",
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
