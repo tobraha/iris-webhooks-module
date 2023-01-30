@@ -19,9 +19,9 @@
 #  Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 module_name = "IrisWebHooks"
-module_description = "Provides webhooks for IRIS. https://docs.dfir-iris.org/operations/modules/natives/IrisWebHooks/"
-interface_version = 1.1
-module_version = "1.0.0"
+module_description = "Provides webhooks for IRIS. See https://docs.dfir-iris.org/operations/modules/natives/IrisWebHooks/"
+interface_version = "1.2.0"
+module_version = "1.0.2"
 pipeline_support = False
 pipeline_info = {}
 
