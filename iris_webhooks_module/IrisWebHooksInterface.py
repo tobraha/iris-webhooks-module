@@ -58,7 +58,9 @@ class IrisWebHooksInterface(IrisModuleInterface):
         hooks = []
 
         if module_conf.get('wh_configuration') is None:
-            self.log.error('Web hook configuration not found')
+            self.log.info('Web hook configuration not found. Maybe first run?')
+            self.log.info('Nothing to do here')
+            return
 
         jconfig = json.loads(module_conf.get('wh_configuration'))
 
