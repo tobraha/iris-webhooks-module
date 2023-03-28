@@ -21,7 +21,7 @@
 module_name = "IrisWebHooks"
 module_description = "Provides webhooks for IRIS. See https://docs.dfir-iris.org/operations/modules/natives/IrisWebHooks/"
 interface_version = "1.2.0"
-module_version = "1.0.2"
+module_version = "1.0.3"
 pipeline_support = False
 pipeline_info = {}
 
