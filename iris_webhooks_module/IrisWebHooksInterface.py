@@ -260,12 +260,19 @@ class IrisWebHooksInterface(IrisModuleInterface):
             case_id = data[0].case_id
             object_url = f"{server_url}/case/evidences?cid={case_id}&shared={data[0].id}"
 
-        elif hook_object == 'task' or hook_object == 'global_task':
+        elif hook_object == 'task':
             user_name = data[0].user_update.name
             object_name = data[0].task_title
             case_name = data[0].case.name
             case_id = data[0].task_case_id
             object_url = f"{server_url}/case/task?cid={case_id}&shared={data[0].id}"
+
+        elif hook_object == 'global_task':
+            user_name = data[0].user_update.name
+            object_name = data[0].task_title
+            case_name = 'Global'
+            case_id = None
+            object_url = f"{server_url}/dashboard?cid=1#gtasks_table_wrapper"
 
         elif hook_object == 'report':
             object_name = 'a report'
@@ -274,8 +281,11 @@ class IrisWebHooksInterface(IrisModuleInterface):
             object_name = self._render_url(object_url, object_name, request_rendering)
 
         if case_id:
-            case_info = "on case {rendered_url}".format(rendered_url=self._render_url(f"{server_url}/case?cid={case_id}",
-                                                                                      f"#{case_id}", request_rendering))
+            case_info = "on case {rendered_url}".format(
+                rendered_url=self._render_url(f"{server_url}/case?cid={case_id}",
+                                              f"#{case_id}", request_rendering))
+        else:
+            case_info = None
 
         description = f"{user_name} {hook_type}d {hook_object} {object_name} {case_info}"
         title = f"[{case_name}] {hook_object.capitalize()} {hook_type}d"
