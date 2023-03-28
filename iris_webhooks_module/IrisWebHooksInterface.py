@@ -285,7 +285,7 @@ class IrisWebHooksInterface(IrisModuleInterface):
                 rendered_url=self._render_url(f"{server_url}/case?cid={case_id}",
                                               f"#{case_id}", request_rendering))
         else:
-            case_info = None
+            case_info = ""
 
         description = f"{user_name} {hook_type}d {hook_object} {object_name} {case_info}"
         title = f"[{case_name}] {hook_object.capitalize()} {hook_type}d"
