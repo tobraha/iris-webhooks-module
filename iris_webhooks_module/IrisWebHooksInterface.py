@@ -280,7 +280,7 @@ class IrisWebHooksInterface(IrisModuleInterface):
                 object_name = 'a report'
                 case_name = data[0].case.name
             except AttributeError:
-                print(data)
+                self.log.error(data)
                 raise
 
         if object_url:
