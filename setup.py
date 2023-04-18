@@ -28,7 +28,7 @@ README = (CURR_DIR / "README.md").read_text()
 
 setuptools.setup(
      name='iris_webhooks_module',
-     version='1.0.3',
+     version='1.0.4',
      packages=['iris_webhooks_module'],
      author="DFIR-IRIS",
      author_email="contact@dfir-iris.org",
