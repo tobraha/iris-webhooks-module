@@ -276,9 +276,7 @@ class IrisWebHooksInterface(IrisModuleInterface):
 
         elif hook_object == 'report':
             self.log.info(str(data))
-            user_name = data[0].user_update.name
             object_name = 'a report'
-            case_name = data[0].case.name
 
         if object_url:
             object_name = self._render_url(object_url, object_name, request_rendering)
