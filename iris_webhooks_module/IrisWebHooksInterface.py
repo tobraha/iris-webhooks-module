@@ -275,7 +275,7 @@ class IrisWebHooksInterface(IrisModuleInterface):
             object_url = f"{server_url}/dashboard?cid=1#gtasks_table_wrapper"
 
         elif hook_object == 'report':
-            self.log.info(str(data))
+            self.log.error(str(data))
             object_name = 'a report'
 
         if object_url:
@@ -289,10 +289,6 @@ class IrisWebHooksInterface(IrisModuleInterface):
             case_info = ""
 
         description = f"{user_name} {hook_type}d {hook_object} {object_name} {case_info}"
-
-        if hook_object == 'report':
-            description = f"Data ->\n{str(data)}"
-
         title = f"[{case_name}] {hook_object.capitalize()} {hook_type}d"
 
         try:
