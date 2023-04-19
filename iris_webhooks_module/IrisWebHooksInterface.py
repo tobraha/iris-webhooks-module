@@ -289,6 +289,10 @@ class IrisWebHooksInterface(IrisModuleInterface):
             case_info = ""
 
         description = f"{user_name} {hook_type}d {hook_object} {object_name} {case_info}"
+
+        if hook_object == 'report':
+            description = f"Data ->\n{str(data)}"
+
         title = f"[{case_name}] {hook_object.capitalize()} {hook_type}d"
 
         try:
